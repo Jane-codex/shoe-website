@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo img {
+  width: 112px;
+ height: 112px;
+ top: 25px;
+ left: 142px;
+ border-radius: 250px;
+
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 19px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 498px;
+  height: 34px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 30px; 
+  height: 2px;
+  background-color: #ffffff;
+  bottom: -5px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+  filter: blur(1px); 
+}
+
+nav a:hover::after {
+  opacity: 1;
+}
+
+.signup {
+  background-color: #ffffff;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 125px;
+  height: 49.1px;
+  top: 51px;
+  left: 1125px;
+  border: none;
+  border-radius: 47px;
+  cursor: pointer;
+  transition: 0.3s ease; 
+}
+
+.signup:hover {
+  color:  orangered;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 60px;
+  margin-top: -80px;
+}
+
+.hero-box {
+  display: flex;
+  background-color: #201e1e;
+  border: 1px solid;
+  border-radius: 62px;
+  padding: 70px;
+  align-items: center;
+}
+
+.hero-image {
+  position: relative; 
+}
+
+
+.hero-image img {
+  max-width: 250px;
+  margin-right: 30px;
+  border-radius: 10px;
+  margin-top: 60px;
+}
+
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; 
+  left: 30px; 
+  width: 250px; 
+  height: 30px; 
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent); 
+  filter: blur(3px);
+  border-radius: 50%; 
+}
+
+
+.hero-content {
+  max-width: 450px;
+  text-align: left;
+  order: -1;
+}
+
+
+.hero-content h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: -1px; 
+  line-height: 1.2; 
+}
+
+.hero-content p {
+  margin-bottom: 30px;
+}
+
+
+.hero-button button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 47px;
+  margin-right: 15px;
+  cursor: pointer;
+  color: #173e00;
+}
+
+.buy-now:hover {
+  color: orangered;
+}
+
+.hero-button button.explore:hover {
+  color: orangered;
+  transition: 0.3s ease;
+}
+
+
+.hero-button button.explore {
+  font-size: 16px;
+  letter-spacing: 0%;
+  background-color: #201e1e;
+  color: #ffffff;
+ border: 1px  solid;
+ cursor: pointer;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px; /* Reduced header padding */
+  }
+
+  .logo img {
+      width: 80px; /* Reduced logo size */
+      height: 80px;
+      top: auto; /* Remove top and left positioning */
+      left: auto;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      width: 100%; /* Take full width */
+      gap: 10px;
+      margin-top: 10px;
+  }
+
+  .signup {
+      width: 100%; /* Take full width */
+      top: auto; /* Remove top and left positioning */
+      left: auto;
+      margin-top: 20px;
+  }
+
+  .hero {
+      padding: 20px; /* Reduced hero padding */
+      margin-top: 0; /* Remove negative margin */
+  }
+
+  .hero-box {
+      flex-direction: column;
+      padding: 30px; /* Reduced hero-box padding */
+      border-radius: 30px;
+  }
+
+  .hero-image img {
+      margin: 0;
+      max-width: 100%; /* Take full width */
+      margin-top: 20px; /* Reduced image margin top */
+  }
+
+  .hero-image::after {
+      left: 0; /* Align with image */
+      width: 100%;
+  }
+
+  .hero-content {
+      order: 0; /* Reset order */
+      text-align: center;
+      max-width: 100%; /* Take full width */
+      margin-top: 20px;
+  }
+
+  .hero-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .hero-button button {
+      width: 100%;
+      margin: 10px 0;
+  }
+}
+
+/* For even smaller screens (e.g., mobile phones) */
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+      font-size: 2em; /* Further reduce font size */
+  }
+}
+
